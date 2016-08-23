@@ -1,0 +1,25 @@
+<script type="text/javascript">
+    $(function () {
+        $('#button-menu').click(function (e) {
+            $('#left-box').stop().animate({
+                'right' : '0'
+            });
+            $('#bgvid').stop().animate({
+                'padding-left' : '0'
+            });
+            $('#contenedor').fadeOut(400, function () {
+                $('#sub-contenedor').fadeIn();
+            });
+        });
+
+        $('#close-left-box').click(function () {
+            $('#left-box').stop().animate({'right' : '-25%'});
+            $('#bgvid').stop().animate({
+                'padding-left' : '25%'
+            });
+            $('#sub-contenedor').fadeOut(400, function () {
+                $('#contenedor').fadeIn();
+            });
+        });
+    });
+</script>

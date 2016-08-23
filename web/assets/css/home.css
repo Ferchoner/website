@@ -197,9 +197,38 @@ p.subtitulo {
   text-align: left;
 }
 
+/* Contenedor miniatura */
+
+#sub-contenedor {
+  left: 0;
+  width: 100%;
+  text-align: left;
+  margin-top: 100px;
+  display: none;
+}
+
+div.fondo {
+  background: #11293d none repeat scroll 0 0;
+  position: absolute;
+  z-index: -1;
+  height: 70px;
+  width: 190px;
+}
+
 nav.navbar-default {
   background-color: #333;
 }
+
+.sub-heading {
+  font-family: effraBold, Helvetica, Arial, sans-serif;
+  font-size: 3em;
+  text-shadow: none;
+  margin-left: 70px;
+  margin-top: 12px;
+  color: #ecffe3;
+}
+
+/* Fin Contenedor Miniatura */
 
 video {
   position: absolute;
@@ -263,10 +292,9 @@ button.masthead-nav {
   background-color: #6bffb9;
   height: 100%;
   position: absolute;
-  right: 0;
+  right: -25%;
   top: 0;
   width: 25%;
-  display: block;
 }
 
 ul.productos {
@@ -291,3 +319,9 @@ span.glyphicon.glyphicon-remove {
   text-shadow: none;
   top: 30px;
 }
+
+#close-left-box {
+  cursor: pointer;
+}
+
+
