@@ -1,5 +1,68 @@
 {% extends "::base.html.twig" %}
 
-{% block body %}
+{% block stylesheets %}
+    <!-- Bootstrap core CSS -->
+    {#{{ asset('assets/css/thechance.css') }}#}
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="{{ asset('assets/css/ie10-viewport-bug-workaround.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('assets/css/home.css') }}" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="{{ asset('assets/js/ie8-responsive-file-warning.js') }}"></script><![endif]-->
+    <script src="{{ asset('assets/js/ie-emulation-modes-warning.js') }}"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+{% endblock %}
+
+{% block body %}
+    <video autoplay  poster="{{ asset('assets/images/polina.jpg') }}" id="bgvid" loop>
+        {#<source src="{{ asset('assets/media/KEEPAWAKE.webm') }}" type="video/webm">#}
+        <source src="{{ asset('assets/media/KEEPAWAKE.mp4') }}" type="video/mp4">
+    </video>
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div id="contenedor" class="masthead clearfix">
+                    <div class="inner">
+                        <h1 class="heading">Comercial</h1>
+                        <p class="subtitulo">
+                            Su objetivo es posicionar <br>
+                            un producto o servicio
+                        </p>
+                        <nav>
+                            <button type="button" class="nav masthead-nav" data-toggle="collapse" data-target="#left-box" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div id="left-box" class="container">
+                <div class="menu-lateral">
+                    <ul class="productos">
+                        <li>Comercial</li>
+                        <li>Coorporativo</li>
+                        <li>Institucional</li>
+                        <li>Testimonial</li>
+                        <li>Videoclip</li>
+                        <li>Aéreo</li>
+                        <li>E-Learning</li>
+                        <li>Interactivo</li>
+                    </ul>
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
