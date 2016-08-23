@@ -303,12 +303,19 @@ ul.productos {
 }
 
 .productos li {
+  list-style: outside none none;
+  margin: 25px 0 0;
+}
+
+.productos li a {
   color: #030905;
   font-family: effraRegular, Helvetica, Arial, sans-serif;
   font-size: 1.7em;
-  list-style: outside none none;
-  margin: 25px 0 0;
   text-shadow: none;
+}
+
+.productos li a:hover {
+  text-decoration: none;
 }
 
 span.glyphicon.glyphicon-remove {
