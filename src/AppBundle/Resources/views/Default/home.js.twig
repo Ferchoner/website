@@ -1,25 +1,65 @@
+<div>
+</div>
 <script type="text/javascript">
+    var claseActiva = 'comercial';
     $(function () {
-        $('#button-menu').click(function (e) {
-            $('#left-box').stop().animate({
-                'right' : '0'
-            });
-            $('#bgvid').stop().animate({
-                'padding-left' : '0'
-            });
-            $('#contenedor').fadeOut(400, function () {
-                $('#sub-contenedor').fadeIn();
-            });
+        $('.button-menu').click(openMenu);
+
+        $('#close-left-box').click(closeMenu);
+
+        $('#coorporativo, #comercial, #institucional, #testimonial, #videoclip, #aereo, #elearning, #interactivo').click(changePage);
+    });
+
+    function openMenu()
+    {
+        $('.left-blue').css('min-width', '0').stop().animate({
+            'width' : 0
+        });
+        $('#left-box').stop().animate({
+            'right' : '0'
+        });
+        $('#bgvid').stop().animate({
+            'padding-left' : '0',
+            'padding-right' : '20%'
+        });
+        $('.' + claseActiva +' #contenedor').fadeOut(400, function () {
+            $('.' + claseActiva +' #sub-contenedor').fadeIn();
+        });
+    }
+
+    function closeMenu() {
+        $('.left-blue').css('min-width', '345px').stop().animate({
+            'width': '25%'
+        });
+        $('#left-box').stop().animate({'right' : '-25%'});
+        $('#bgvid').stop().animate({
+            'padding-left' : '20%',
+            'padding-right' : '0'
+        });
+        $('.' + claseActiva +' #sub-contenedor').fadeOut(400, function () {
+            $('.' + claseActiva +' #contenedor').fadeIn();
+        });
+    }
+
+    function changePage() {
+        claseNueva = $(this).attr('id');
+        console.log(claseNueva, claseActiva);
+        $('.' + claseActiva).fadeOut(400, function() {
+            claseActiva = claseNueva;
+            console.log(claseNueva, claseActiva);
+            $('.' + claseActiva).fadeIn();
         });
 
-        $('#close-left-box').click(function () {
-            $('#left-box').stop().animate({'right' : '-25%'});
-            $('#bgvid').stop().animate({
-                'padding-left' : '25%'
-            });
-            $('#sub-contenedor').fadeOut(400, function () {
-                $('#contenedor').fadeIn();
-            });
+        $('.left-blue').css('min-width', '345px').stop().animate({
+            'width': '25%'
         });
-    });
+        $('#left-box').stop().animate({'right' : '-25%'});
+        $('#bgvid').stop().animate({
+            'padding-left' : '20%',
+            'padding-right' : '0'
+        });
+        $('.' + claseActiva +' #sub-contenedor').fadeOut(400, function () {
+            $('.' + claseActiva +' #contenedor').fadeIn();
+        });
+    }
 </script>
